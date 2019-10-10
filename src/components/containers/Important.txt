@@ -1,0 +1,1 @@
+Esta carpeta espara los componentes principales de  la  aplicación
