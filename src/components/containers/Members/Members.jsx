@@ -1,7 +1,7 @@
 import React from "react";
 
-const Home = props => {
+const Members = (props) => {
   return <div>Members Component</div>;
 };
 
-export default Home;
+export default Members;
