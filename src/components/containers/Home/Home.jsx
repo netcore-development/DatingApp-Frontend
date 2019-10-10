@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Button from "../../UI/Button";
+import Register from "../../Register/Register";
 
 class Home extends Component {
   state = {
@@ -7,7 +8,9 @@ class Home extends Component {
   };
 
   registerToggleHandler = () => {
-    this.setState(({registerToggle}) => ({ registerToggle : !registerToggle }))
+    this.setState(({ registerToggle }) => ({
+      registerToggle: !registerToggle
+    }));
   };
 
   render() {
@@ -17,7 +20,8 @@ class Home extends Component {
       <div className="container">
         <div className="row justify-content-center">
           <div className="text-center">
-            <Button inputClasses="btn-info btn-lg" onClick={this.registerToggleHandler}>Cancel</Button>
+            <Register onCancel={this.registerToggleHandler}></Register>
+            
           </div>
         </div>
       </div>
@@ -28,7 +32,12 @@ class Home extends Component {
           Come on in to view your matches... All you need to do is sign up!
         </p>
         <div className="text-center">
-          <Button inputClasses="btn-primary btn-lg mr-2" onClick={this.registerToggleHandler}>Register</Button>
+          <Button
+            inputClasses="btn-primary btn-lg mr-2"
+            onClick={this.registerToggleHandler}
+          >
+            Register
+          </Button>
           <Button inputClasses="btn-info btn-lg">Learn more</Button>
         </div>
       </div>
